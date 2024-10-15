@@ -1,38 +1,146 @@
 .App {
   text-align: center;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between; /* Left for personal info, right for charts */
+  align-items: flex-start;
+}
+
+.personal-info {
+  width: 25%; /* Take 25% of the screen for personal info */
+  padding: 30px;
+  background: #f9f9f9;  /* Light background color */
+  color: #333;  /* Darker text for contrast */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);  /* Softer shadow for depth */
+  margin-right: 20px;
+  font-family: 'Poppins', sans-serif;  /* Optional: Using a clean modern font */
+}
+
+.personal-info h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #4a4a4a;  /* Subtle dark tone for the heading */
+}
+
+.personal-info label {
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: #555;  /* Muted color for labels */
+}
+
+.personal-info input {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;  /* Light border */
+  font-size: 14px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);  /* Soft inner shadow for depth */
+  background-color: #fff;  /* White background for inputs */
+}
+
+.personal-info input:focus {
+  outline: none;
+  border-color: #36A2EB;  /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(54, 162, 235, 0.3);  /* Subtle glow effect */
+}
+
+.personal-info h3 {
+  margin-top: 25px;
+  font-size: 18px;
+  color: #4a4a4a;
+}
+
+.personal-info p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;  /* Standard dark text color */
+}
+
+.charts-section {
+  width: 70%; /* Take 70% of the screen for charts */
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.chart {
+  width: 45%;
+  height: 400px;
+}
+
+.input-section {
+  margin: 20px 0;
+}
+
+input, select {
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4BC0C0;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #36A2EB;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Align label and input on the same line */
+.personal-info div {
+  display: flex; /* Use Flexbox to align items horizontally */
+  align-items: center; /* Vertically center the label and input */
+  margin-bottom: 15px; /* Space between each row */
 }
+
+.personal-info label {
+  font-size: 15px;
+  font-weight: 600;
+  width: 120px; /* Give the label a fixed width */
+  margin-right: 10px; /* Space between label and input */
+  color: #555;
+}
+
+.personal-info input {
+  flex: 1; /* Allow the input to take the remaining space */
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.personal-info input:focus {
+  outline: none;
+  border-color: #36A2EB;
+  box-shadow: 0 0 5px rgba(54, 162, 235, 0.3);
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
